@@ -1,4 +1,4 @@
-package dev.higurashi.trial_monolith_spellbooks.common.spell.blood;
+package dev.higurashi.trial_monolith_spellbooks.common.spell.eldritch;
 
 import dev.higurashi.trial_monolith_spellbooks.TrialMonolithSpellbooks;
 import dev.higurashi.trial_monolith_spellbooks.registry.TMSEffectRegistry;
@@ -29,7 +29,7 @@ public class ManyManyMonolithLaser extends AbstractSpell {
 
     public ManyManyMonolithLaser() {
         this.castTime = 45;
-        this.baseManaCost = 300;
+        this.baseManaCost = 1000;
         this.baseSpellPower = 20;
         this.manaCostPerLevel = 50;
         this.spellPowerPerLevel = 5;
@@ -50,7 +50,7 @@ public class ManyManyMonolithLaser extends AbstractSpell {
 
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity caster, CastSource source, MagicData magicData) {
-        caster.addEffect(new MobEffectInstance(TMSEffectRegistry.BEAM.get(), 200));
+        caster.addEffect(new MobEffectInstance(TMSEffectRegistry.BEAM.get(), spellLevel * 200));
 
         super.onCast(level, spellLevel, caster, source, magicData);
     }

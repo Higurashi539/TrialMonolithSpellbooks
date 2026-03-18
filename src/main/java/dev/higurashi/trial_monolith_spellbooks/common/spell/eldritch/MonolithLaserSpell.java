@@ -1,4 +1,4 @@
-package dev.higurashi.trial_monolith_spellbooks.common.spell.blood;
+package dev.higurashi.trial_monolith_spellbooks.common.spell.eldritch;
 
 import dev.higurashi.trial_monolith_spellbooks.TrialMonolithSpellbooks;
 import io.github.kosianodangoo.trialmonolith.common.entity.HugeBeamEntity;
@@ -25,11 +25,11 @@ public class MonolithLaserSpell extends AbstractSpell {
             .setMinRarity(SpellRarity.LEGENDARY)
             .setAllowCrafting(false)
             .setCooldownSeconds(40)
-            .setMaxLevel(3).build();
+            .setMaxLevel(1).build();
 
     public MonolithLaserSpell() {
         this.castTime = 45;
-        this.baseManaCost = 300;
+        this.baseManaCost = 1000;
         this.baseSpellPower = 20;
         this.manaCostPerLevel = 50;
         this.spellPowerPerLevel = 5;

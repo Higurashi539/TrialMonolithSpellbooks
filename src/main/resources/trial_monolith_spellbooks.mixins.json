@@ -1,9 +1,9 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.higurashi.eeeab_spellbooks.mixin",
+  "package": "dev.higurashi.trial_monolith_spellbooks.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "eeeab_spellbooks.refmap.json",
+  "refmap": "trial_monolith_spellbooks.refmap.json",
   "mixins": [
   ],
   "client": [

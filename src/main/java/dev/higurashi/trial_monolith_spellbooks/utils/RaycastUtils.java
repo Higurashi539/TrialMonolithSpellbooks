@@ -1,4 +1,4 @@
-package dev.higurashi.eeeab_spellbooks.utils;
+package dev.higurashi.trial_monolith_spellbooks.utils;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
