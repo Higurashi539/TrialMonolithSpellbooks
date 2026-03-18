@@ -2,6 +2,7 @@ package dev.higurashi.trial_monolith_spellbooks;
 
 import com.mojang.logging.LogUtils;
 import dev.higurashi.trial_monolith_spellbooks.registry.TMSEffectRegistry;
+import dev.higurashi.trial_monolith_spellbooks.registry.TMSEntityRegistry;
 import dev.higurashi.trial_monolith_spellbooks.registry.TMSSpellRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,6 +19,7 @@ public class TrialMonolithSpellbooks {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         TMSSpellRegistry.register(modEventBus);
+        TMSEntityRegistry.register(modEventBus);
         TMSEffectRegistry.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);

@@ -3,6 +3,7 @@ package dev.higurashi.trial_monolith_spellbooks.registry;
 import dev.higurashi.trial_monolith_spellbooks.TrialMonolithSpellbooks;
 import dev.higurashi.trial_monolith_spellbooks.common.spell.eldritch.ManyManyMonolithLaser;
 import dev.higurashi.trial_monolith_spellbooks.common.spell.eldritch.MonolithLaserSpell;
+import dev.higurashi.trial_monolith_spellbooks.common.spell.eldritch.SummonTrialMonolithSpell;
 import dev.higurashi.trial_monolith_spellbooks.common.spell.eldritch.TargetMonolithLaser;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
@@ -18,4 +19,5 @@ public class TMSSpellRegistry {
     public static final RegistryObject<AbstractSpell> MONOLITH_LASER_SPELL = registerSpell(new MonolithLaserSpell());
     public static final RegistryObject<AbstractSpell> MANY_MONOLITH_LASER_SPELL = registerSpell(new ManyManyMonolithLaser());
     public static final RegistryObject<AbstractSpell> TARGET_MONOLITH_LASER = registerSpell(new TargetMonolithLaser());
+    public static final RegistryObject<AbstractSpell> SUMMON_TRIAL_MONOLITH_SPELL = registerSpell(new SummonTrialMonolithSpell());
 }

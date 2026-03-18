@@ -9,7 +9,6 @@ import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.level.ClipContext;
@@ -18,7 +17,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.NotNull;
@@ -26,17 +25,17 @@ import org.jetbrains.annotations.NotNull;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class BeamEffectHandler {
     @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        Player player = event.player;
-        Level level = player.level();
+    public static void onLivingTick(LivingEvent.LivingTickEvent event) {
+        LivingEntity entity = event.getEntity();
+        Level level = entity.level();
 
         if (level.isClientSide) return;
 
-        if (player.hasEffect(TMSEffectRegistry.BEAM.get())) {
+        if (entity.hasEffect(TMSEffectRegistry.BEAM.get())) {
             int interval = 2;
 
-            if (player.tickCount % interval == 0) {
-                shootAutoBeam(level, player);
+            if (entity.tickCount % interval == 0) {
+                shootAutoBeam(level, entity);
             }
         }
     }
