@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.higurashi.eeeab_spellbooks.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "eeeab_spellbooks.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
